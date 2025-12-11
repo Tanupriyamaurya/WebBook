@@ -1,15 +1,17 @@
 import {AppBar,Toolbar,styled,Box} from '@mui/material';
 import Search from './Search';
-import logo  from '../../../assets/logo.svg'
+import logo  from '../../../assets/pustakLogo.svg'
+import CustomButtons from './CustomButton';
 const Header=()=>{
     return(
     
         <StyledHeader>
              <StyledToolbar>
         <LogoWrapper>
-          <img src={logo} alt="logo" />
+          <LogoImage src={logo} alt="logo" />
         </LogoWrapper>
         <Search/>
+        <CustomButtons/>
       </StyledToolbar>
         </StyledHeader>  )
 }
@@ -40,6 +42,6 @@ const LogoWrapper = styled(Box)`
 `;
 
 export const LogoImage = styled("img")`
-  height: 45px;
+  height: 35px;
   width: auto;
 `;

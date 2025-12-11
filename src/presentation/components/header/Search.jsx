@@ -28,6 +28,7 @@ const SearchContainer = styled(Box)`
   height: 36px;
   border-radius: 4px;
   box-shadow: inset 0 0 0 1px #e0e0e0;
+  
 `;
 
 const InputSearchBase = styled(InputBase)`
