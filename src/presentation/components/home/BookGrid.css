@@ -1,0 +1,375 @@
+/* /* 
+.books-section {
+  width: 100%;
+  padding: 0 20px 30px;
+  box-sizing: border-box;
+}
+
+.section-tabs {
+  display: flex !important;
+  flex-direction: row !important;
+    justify-content: space-between;  
+
+  align-items: center;
+  gap: 32px;
+  margin: 10px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+
+.tab-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+  padding-bottom: 6px;
+  position: relative;
+  white-space: nowrap;
+}
+
+
+.tab-icon {
+  font-size: 16px;
+}
+
+.tab-item:hover {
+  color: #1976d2;
+}
+
+.tab-item.active {
+  color: #1976d2;
+  font-weight: 600;
+}
+
+.tab-item.active::after {
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #1976d2;
+}
+
+
+@media (max-width: 768px) {
+  .section-tabs {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .section-tabs::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.books-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+/* Book card
+.book-card {
+  min-width: 0; 
+  position: relative;
+  background: #fff;
+  border-radius: 6px;
+  padding: 10px;
+  border: 1px solid #eee;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+} *
+
+.book-card {
+  position: relative;
+  background: #fff;
+  border-radius: 6px;
+  padding: 10px;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+
+.wishlist-icon {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #888;
+}
+
+.wishlist-icon:hover {
+  color: #e53935;
+}
+
+/
+.book-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+.book-info {
+  text-align: left;
+  
+  flex-grow: 1;
+
+}
+
+.book-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.3;
+}
+
+.book-author {
+  font-size: 12px;
+color: #666;
+  margin: 4px 0;
+}
+
+.availability {
+  font-size: 12px;
+  color: #444;
+}
+
+.availability span {
+  color: #2e7d32;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.add-to-cart-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px 0;
+  background-color: #ff9800;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #fb8c00;
+  transform: translateY(-1px);
+}
+
+.add-to-cart-btn:active {
+  transform: scale(0.98);
+}
+.children-book-section {
+  margin: 40px 0;
+}
+
+.section-heading {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px; */
+ 
+
+
+
+
+
+
+
+/* ===== Generic Section Wrapper ===== */
+.books-section {
+  width: 100%;
+  padding: 0 20px 30px;
+  box-sizing: border-box;
+  margin-bottom: 40px; /* spacing between sections */
+}
+
+/* Section Heading */
+.section-heading {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* ===== Tabs (if section has tabs) ===== */
+.section-tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  margin: 10px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tab-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+  padding-bottom: 6px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.tab-item:hover {
+  color: #1976d2;
+}
+
+.tab-item.active {
+  color: #1976d2;
+  font-weight: 600;
+}
+
+.tab-item.active::after {
+  content: "";
+  position: absolute;
+  bottom: -11px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #1976d2;
+}
+
+/* ===== Books Grid (Reusable for any section) ===== */
+.books-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+/* ===== Book Card ===== */
+.book-card {
+  position: relative;
+  background: #fff;
+  border-radius: 6px;
+  padding: 10px;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* Wishlist Icon */
+.wishlist-icon {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 18px;
+ cursor: pointer;
+  color: #888;
+}
+
+.wishlist-icon:hover {
+  color: #e53935;
+}
+
+.book-image {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Book Info */
+.book-info {
+  text-align: left;
+  flex-grow: 1;
+}
+
+.book-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.3;
+}
+
+.book-author {
+  font-size: 12px;
+  color: #666;
+  margin: 4px 0;
+}
+
+.availability {
+  font-size: 12px;
+  color: #444;
+}
+
+.availability span {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px 0;
+  background-color: #ff9800;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #fb8c00;
+  transform: translateY(-1px);
+}
+
+.add-to-cart-btn:active {
+  transform: scale(0.98);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-tabs {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .section-tabs::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+

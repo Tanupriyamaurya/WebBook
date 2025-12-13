@@ -2,10 +2,11 @@
 import { styled } from '@mui/material';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { carouselData } from '../../../data/data';
+import { carouselData,categoriesData } from '../../../data/data';
 import carousel1 from '../../../assets/carousel1.jpg'
 import carousel2 from '../../../assets/carousel2.png'
 import carousel3 from '../../../assets/carousel3.jpg'
+import BookGrid from './BookGrid'
 
 const responsive = {
   desktop: { breakpoint: { max: 3000, min: 1024 }, items: 1 },
@@ -20,7 +21,8 @@ const responsiveThree = {
 const fixedImages = [carousel1,carousel2,carousel3];
 
 const CarouselComponent = () => {
-  return (<>
+  return (
+  <>
     <Carousel
       responsive={responsive}
       autoPlay
@@ -49,6 +51,17 @@ const CarouselComponent = () => {
 ))}
 
       </Carousel>
+      <Heading>Shop by Categories</Heading>
+
+       <CategoriesContainer>
+      {categoriesData.map((item, index) => (
+        <CategoryCard key={index}>
+          <CategoryIcon src={item.icon} alt={item.label} />
+          <CategoryLabel>{item.label}</CategoryLabel>
+        </CategoryCard>
+      ))}
+    </CategoriesContainer>
+    <BookGrid/>
       </>
   );
 };
@@ -74,4 +87,50 @@ const Spacer = styled('div')({
 });
 const ImageWrapper = styled('div')({
   padding: '0 10px',   
+});
+const CategoriesContainer = styled('div')({
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'flex-start',
+  gap: '20px', 
+  padding: '10px 0',
+  margin: '0 20px 20px'
+
+});
+
+const CategoryCard = styled('div')({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  width: `calc((100% - 7 * 20px) / 8)`, // 8 items per row, 7 gaps
+});
+
+const CategoryIcon = styled('img')({
+  width: '80px',
+  height: '80px',
+  borderRadius: '50%',
+  background: '#ffffff',
+  padding: '10px',
+  objectFit: 'contain',
+  marginBottom: '5px',
+    transition: 'all 0.3s ease',   
+
+    '&:hover': {
+    transform: 'scale(1.10)',     
+    boxShadow: '0 4px 12px rgba(0,0,0,0.2)',  
+    background: '#ffffff',         
+    border: '2px solid #1976d2',   
+  },
+});
+
+const CategoryLabel = styled('span')({
+  fontSize: '12px',
+  textAlign: 'center',
+  color: '#333',
+});
+const Heading = styled('h2')({
+  fontSize: '20px',
+  fontWeight: 600,
+  color: '#4A4A4A',
+  margin: '20px 20px 10px',   // Adjust spacing
 });
