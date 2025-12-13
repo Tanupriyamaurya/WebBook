@@ -149,6 +149,7 @@ export const productsData = [
     author: "Dr Ramesh Kumar Upadhyay",
     image: book1,
     availability: "New",
+    price:200,
 
   },
   {
@@ -157,6 +158,7 @@ export const productsData = [
     author: "NCERT",
     image: book2,
         availability: "Used",
+        price:560,
 
   },
   {
@@ -165,6 +167,7 @@ export const productsData = [
     author: "Robert G. Barnes",
     image: book3,
         availability: "Used",
+        price:200,
 
   },
   {
@@ -172,7 +175,7 @@ export const productsData = [
     title: "Pratiyogita Darpan April 2024",
     author: "Others",
     image: book1,
-        availability: "Used",
+        availability: "Used",price:200,
 
   },
   {
@@ -181,6 +184,7 @@ export const productsData = [
     author: "Others",
     image: book2,
         availability: "New",
+        price:300
 
   },
 ];

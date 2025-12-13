@@ -3,12 +3,14 @@ import CategoryRow from './CategoryRow'
 import { secondaryNavData } from '../../../data/data'
 import CarouselComponent from './CarouselComponent';
 import {styled,Box} from '@mui/material';
+import HomeFooter from './HomeFooter';
 const Home = () => {
   return (
     <>
          <CategoryRow items={secondaryNavData}/>
          <Component><CarouselComponent/>
         </Component>
+        <HomeFooter/>
     </>
   )
 }

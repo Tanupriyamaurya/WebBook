@@ -2,22 +2,24 @@ import { Box, Typography, styled } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import { useNavigate } from "react-router-dom";
 
 const CustomButtons = () => {
+  const navigate = useNavigate();
   return (
     <Wrapper>
 
-      <Container>
+      <Container onClick={() =>{console.log("login"); navigate("/login")}}>
         <StyledIcon as={AccountCircleOutlinedIcon} />
         <Text>Login</Text>
       </Container>
 
-      <Container>
+      <Container onClick={() => navigate("/track-order")}>
         <StyledIcon as={LocationOnOutlinedIcon} />
         <Text>Track Order</Text>
       </Container>
 
-      <Container>
+      <Container onClick={() => navigate("/cart")}>
         <StyledIcon as={ShoppingCartIcon} />
         <Text>Cart</Text>
       </Container>
