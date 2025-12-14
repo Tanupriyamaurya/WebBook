@@ -11,6 +11,20 @@ import travel2 from '../assets/travel2.jpg'
 import travel3 from '../assets/travel3.jpg'
 import travel4 from '../assets/travel4.jpg'
 import travel5 from '../assets/travel5.jpg'
+import english from '../assets/english.png'
+import hindi from '../assets/hindi.png'
+import social from '../assets/social.png'
+import science from '../assets/science.png'
+import os from '../assets/os.png'
+import engmath from '../assets/engmath.png'
+import digiElectronics from '../assets/digiElectronics.png'
+import database from '../assets/database.png'
+import dsa from '../assets/dsa.png'
+import sscreasioning from '../assets/sscreasioning.png'
+import gk from '../assets/gk.png'
+import quantitative from '../assets/quantitative.png'
+import digitalMarket from '../assets/digitalmarket.jpg'
+import rk from '../assets/rk.jpg'
 
 
 export const secondaryNavData = [
@@ -242,5 +256,212 @@ export const travelBooks = [
     image: travel5,
     price: 900,
     availability: "New",
+  },
+];
+
+export const schoolBooks = [
+  {
+    id: 1,
+    title: "NCERT Mathematics Class 10",
+    author: "NCERT",
+image:science,
+    availability: "In Stock",
+  },
+  {
+    id: 2,
+    title: "NCERT Science Class 9",
+    author: "NCERT",
+image:hindi,
+    availability: "In Stock",
+  },
+  
+  {
+    id:3,
+    title:"NCERT Hindi Class 10",
+    author:"NCERT",
+image:english,
+  availability:"In Stock", 
+},
+{
+    id:4,
+    title:"NCERT Social-Science Class 10",
+    author:"NCERT",
+image:social,
+  availability:"In Stock", }
+  
+];
+
+export const collegeBooks = [
+  {
+    id: 101,
+    title: "Engineering Mathematics",
+    author: "B.S. Grewal",
+    image: engmath,
+    availability: "In Stock",
+  },
+  {
+    id: 102,
+    title: "Data Structures and Algorithms",
+    author: "A. M. Tanenbaum",
+    image: dsa,
+    availability: "In Stock",
+  },
+  {
+    id: 103,
+    title: "Digital Electronics",
+    author: "M. Morris Mano",
+    image: digiElectronics,
+    availability: "In Stock",
+  },
+  {
+    id: 104,
+    title: "Database System Concepts",
+    author: "Abraham Silberschatz",
+    image: database,
+    availability: "In Stock",
+  },
+  {
+    id: 105,
+    title: "Operating System Concepts",
+    author: "Abraham Silberschatz",
+    image: os,    
+    availability: "In Stock",
+  },
+];
+
+export const competitiveBooks = [
+  {
+    id: 201,
+    title: "SSC Reasoning",
+    author: "Arihant",
+    image: sscreasioning,
+    availability: "In Stock",
+  },
+  {
+    id: 202,
+    title: "SSC Quantitative Aptitude",
+    author: "R.S. Aggarwal",
+    image: quantitative,
+    availability: "In Stock",
+  },
+  {
+    id: 203,
+    title: "General Knowledge 2025",
+    author: "Manohar Pandey",
+    image: gk,
+    availability: "In Stock",
+  },
+  {
+    id: 204,
+    title: "Objective General English",
+    author: "S.P. Bakshi",
+    image: english,
+    availability: "In Stock",
+  },
+];
+export const eBooks = [
+  {
+    id: 301,
+    title: "Python Programming Basics",
+    author: "John Doe",
+    image: dsa,
+    type: "PDF",
+    price: 200,
+    availability: "Downloadable",
+  },
+  {
+    id: 302,
+    title: "SSC General Knowledge PDF",
+    author: "Arihant",
+    image: gk,
+    type: "PDF",
+    price: 100,
+    availability: "Downloadable",
+  },
+  {
+    id: 303,
+    title: "Digital Marketing Essentials",
+    author: "Jane Smith",
+    image: digitalMarket,
+    type: "PDF",
+    price: 180,
+    availability: "Downloadable",
+  },
+  {
+    id: 304,
+    title: "Data Structures & Algorithms",
+    author: "A. M. Tanenbaum",
+    image: dsa,
+    type: "PDF",
+    price: 220,
+    availability: "Downloadable",
+  },
+];
+export const notesAndGuides = [
+  {
+    id: 401,
+    title: "Class 10 Maths Quick Notes",
+    author: "NCERT",
+    image: engmath,
+    type: "PDF",
+    price: 50,
+    availability: "Downloadable",
+  },
+  {
+    id: 402,
+    title: "UPSC General Studies Guide",
+    author: "Pratiyogita Darpan",
+    image: gk,
+    type: "PDF",
+    price: 150,
+    availability: "Downloadable",
+  },
+  {
+    id: 403,
+    title: "English Grammar Shortcuts",
+    author: "S.P. Bakshi",
+    image: english,
+    type: "PDF",
+    price: 60,
+    availability: "Downloadable",
+  },
+  {
+    id: 404,
+    title: "Physics Formula Sheet",
+    author: "H.C. Verma",
+    image: science,
+    type: "PDF",
+    price: 70,
+    availability: "Downloadable",
+  },
+];
+export const authorCorner = [
+  {
+    id: 501,
+    name: "R.K. Sharma",
+    bio: "Author of multiple SSC and banking exam guides.",
+    image: rk,
+    books: ["SSC Reasoning", "SSC Quantitative Aptitude"],
+  },
+  {
+    id: 502,
+    name: "J.K. Rowling",
+    bio: "Famous fiction author.",
+    image: harray,
+    books: ["Harry Potter Series"],
+  },
+  {
+    id: 503,
+    name: "Chetan Bhagat",
+    bio: "Popular contemporary author of novels and motivational books.",
+    image: social,
+    books: ["Two States", "The 3 Mistakes of My Life"],
+  },
+  {
+    id: 504,
+    name: "B.S. Grewal",
+    bio: "Expert in engineering mathematics books for students.",
+    image: engmath,
+    books: ["Engineering Mathematics"],
   },
 ];

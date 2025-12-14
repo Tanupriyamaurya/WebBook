@@ -6,7 +6,7 @@ import whatsapp from '../../../assets/whatsapp.jpg'
 import MenuIcon from '@mui/icons-material/Menu';
 import { categories } from '../../../data/data';
 
-const CategoryRow = () => {
+const CategoryRow = ({onCategoryClick}) => {
     const [open, setOpen] = useState(false);
 
   return (
@@ -19,7 +19,10 @@ const CategoryRow = () => {
   
       <SliderWrapper>
         {secondaryNavData.map((obj, index) => (
-          <Item key={index}>
+          <Item key={index}
+          onClick={()=>{  console.log("clicked:", obj.label);
+onCategoryClick(obj.label)}}
+          sx={{cursor:"pointer"}}>
             <ItemImg src={obj.icon} alt={obj.label} />
             <ItemText>{obj.label}</ItemText>
           </Item>

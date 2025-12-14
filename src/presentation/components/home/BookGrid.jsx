@@ -24,7 +24,6 @@ const BookGrid = () => {
         </div>
       </div>
 
-      {/* Reusable book sections */}
       <BookSection books={productsData} />
       <BookSection title="Children Book Set" books={childrenBooks} />
       <BookSection title="Travel Book Set" books={travelBooks}/>
