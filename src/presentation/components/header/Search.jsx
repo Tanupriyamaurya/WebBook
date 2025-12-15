@@ -24,7 +24,7 @@ const SearchContainer = styled(Box)`
   border-radius: 4px;
   box-shadow: inset 0 0 0 1px #e0e0e0;
 
-  width: 40%;
+  width: 60%;
   margin-left: 3rem;
 
   /* Tablet */
@@ -81,3 +81,4 @@ const SearchIconWrapper = styled(Box)`
     width: 48px;
   }
 `;
+
