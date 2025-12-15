@@ -465,3 +465,8 @@ export const authorCorner = [
     books: ["Engineering Mathematics"],
   },
 ];
+export const booksTabsData = {
+  "School Books": schoolBooks,
+  "College Books": collegeBooks,
+  "Competitive Exams": competitiveBooks,
+};

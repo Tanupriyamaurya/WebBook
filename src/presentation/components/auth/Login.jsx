@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import "./auth.css";
 import { loginUser } from "../../../utils/authUtils";
-import { useNavigate } from "react-router-dom";
+
+import { Navigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
+  const [redirect, setRedirect] = useState(false);
+
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -15,12 +18,15 @@ const Login = () => {
     const success = loginUser(email, password);
 
     if (success) {
-      alert("Login successful");
-      navigate("/");
+      toast.success("Login successful 🎉");
+      setRedirect(true);
     } else {
-      alert("Please enter valid details");
+      toast.error("Invalid email or password");
     }
   };
+if (redirect) {
+  return <Navigate to="/" replace />;
+}
 
   return (
     <div className="auth-container">

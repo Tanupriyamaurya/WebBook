@@ -91,19 +91,32 @@ const ImageWrapper = styled('div')({
 const CategoriesContainer = styled('div')({
   display: 'flex',
   flexWrap: 'wrap',
-  justifyContent: 'flex-start',
   gap: '20px', 
   padding: '10px 0',
-  margin: '0 20px 20px'
-
+  margin: '0 20px 20px',
+ justifyContent: 'center',
 });
+
 
 const CategoryCard = styled('div')({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  width: `calc((100% - 7 * 20px) / 8)`, // 8 items per row, 7 gaps
+
+  
+  width: 'calc((100% - 7 * 20px) / 8)',
+
+  '@media (max-width: 1024px)': {
+    width: 'calc((100% - 3 * 20px) / 4)',
+  },
+
+  '@media (max-width: 600px)': {
+    width: 'calc((100% - 2 * 16px) / 3)',
+  },
 });
+
+
+
 
 const CategoryIcon = styled('img')({
   width: '80px',
@@ -113,24 +126,46 @@ const CategoryIcon = styled('img')({
   padding: '10px',
   objectFit: 'contain',
   marginBottom: '5px',
-    transition: 'all 0.3s ease',   
+  transition: 'all 0.3s ease',
 
-    '&:hover': {
-    transform: 'scale(1.10)',     
-    boxShadow: '0 4px 12px rgba(0,0,0,0.2)',  
-    background: '#ffffff',         
-    border: '2px solid #1976d2',   
+  '&:hover': {
+    transform: 'scale(1.1)',
+    boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+    border: '2px solid #1976d2',
+  },
+
+
+  '@media (max-width: 1024px)': {
+    width: '70px',
+    height: '70px',
+  },
+
+  '@media (max-width: 600px)': {
+    width: '60px',
+    height: '60px',
   },
 });
 
+// 
 const CategoryLabel = styled('span')({
   fontSize: '12px',
   textAlign: 'center',
   color: '#333',
+
+  '@media (max-width: 600px)': {
+    fontSize: '11px',
+  },
 });
+
+
 const Heading = styled('h2')({
   fontSize: '20px',
   fontWeight: 600,
   color: '#4A4A4A',
-  margin: '20px 20px 10px',   // Adjust spacing
+  margin: '20px 20px 10px',
+
+  '@media (max-width: 600px)': {
+    fontSize: '18px',
+    textAlign: 'center',
+  },
 });
