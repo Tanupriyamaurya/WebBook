@@ -1,12 +1,13 @@
 
 import {InputBase,Box,styled} from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
+import { SEARCH_PLACEHOLDER } from "../../../data/staticData"; 
 
 
-const Search=()=>{
+const Search=({ placeholder })=>{
     return (
     <SearchContainer>
-    <InputSearchBase placeholder='Search for books by title, author, Publication or ISBN'
+    <InputSearchBase placeholder={placeholder || SEARCH_PLACEHOLDER}
     inputProps={{ 'aria-label': 'search books' }}/>
     <SearchIconWrapper>
       <SearchIcon data-testid="SearchIcon"/></SearchIconWrapper>

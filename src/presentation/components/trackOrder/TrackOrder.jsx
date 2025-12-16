@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./TrackOrder.css";
+import { ORDER_STATUS_STEPS } from "../../../data/staticData";
 
 const TrackOrder = () => {
   const [orders, setOrders] = useState([]);
 
-  const steps = ["Order Placed", "Packed", "Shipped", "Delivered"];
+const steps = ORDER_STATUS_STEPS;
 
   useEffect(() => {
     const storedOrders = JSON.parse(localStorage.getItem("orders")) || [];
