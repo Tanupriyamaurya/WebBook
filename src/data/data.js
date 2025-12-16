@@ -203,13 +203,13 @@ export const productsData = [
   },
 ];
  export const childrenBooks = [
-  { id: 1, title: 'Harry Potter', image: charlie, price: 250,    availability: "New",
+  { id: 1, title: 'Harry Potter', image: harray, price: 250,    availability: "New",
  },
-  { id: 2, title: 'The Jungle Book', image: matilda, price: 200 ,    availability: "New",
+  { id: 2, title: 'The Jungle Book', image: jungle, price: 200 ,    availability: "New",
 },
-  { id: 3, title: 'Charlie and the Chocolate Factory', image: harray, price: 300,  availability: "Used",
+  { id: 3, title: 'Charlie and the Chocolate Factory', image: charlie, price: 300,  availability: "Used",
  },
-  { id: 4, title: 'Matilda', image: jungle, price: 220,    availability: "Used",
+  { id: 4, title: 'Matilda', image: matilda, price: 220,    availability: "Used",
 },
   {id:5,title:'Miles Come Home', image:miles,price:600,    availability: "New",
 }
