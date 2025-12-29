@@ -7,6 +7,7 @@ import ProtectedRoute from "./ProtectedRoutes";
 import Profile from "../pages/Profile"
 import Order from "../pages/Order";
 import Wishlist from "../pages/Wishlist";
+
 const AppRoutes = () => {
   return (
     <Routes>
