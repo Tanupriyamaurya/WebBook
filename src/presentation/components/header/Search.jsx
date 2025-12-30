@@ -1,12 +1,13 @@
 
 import {InputBase,Box,styled} from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
+import { SEARCH_PLACEHOLDER } from "../../../data/staticData"; 
 
 
-const Search=()=>{
+const Search=({ placeholder })=>{
     return (
     <SearchContainer>
-    <InputSearchBase placeholder='Search for books by title, author, Publication or ISBN'
+    <InputSearchBase placeholder={placeholder || SEARCH_PLACEHOLDER}
     inputProps={{ 'aria-label': 'search books' }}/>
     <SearchIconWrapper>
       <SearchIcon data-testid="SearchIcon"/></SearchIconWrapper>
@@ -16,18 +17,29 @@ const Search=()=>{
 export default Search;
  
 
-
-
-
 const SearchContainer = styled(Box)`
   background: #fff;
-  width: 40%;
-  margin-left: 3rem;
   display: flex;
   align-items: center;
   height: 36px;
   border-radius: 4px;
   box-shadow: inset 0 0 0 1px #e0e0e0;
+
+  width: 60%;
+  margin-left: 3rem;
+
+  /* Tablet */
+  @media (max-width: 1024px) {
+    width: 55%;
+    margin-left: 1rem;
+  }
+
+  /* Mobile */
+  @media (max-width: 600px) {
+    width: 100%;
+    margin-left: 0;
+    height: 40px;
+  }
 `;
 
 const InputSearchBase = styled(InputBase)`
@@ -35,9 +47,16 @@ const InputSearchBase = styled(InputBase)`
   font-size: 12px;
 
   & input {
-    padding: 0 8px;
+    padding: 0 10px;
     font-size: 12px;
     font-family: 'Open Sans', sans-serif;
+  }
+
+  /* Mobile */
+  @media (max-width: 600px) {
+    & input {
+      font-size: 14px;
+    }
   }
 `;
 
@@ -47,7 +66,20 @@ const SearchIconWrapper = styled(Box)`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 13%;
   height: 100%;
+  cursor: pointer;
+
+  width: 13%;
   border-radius: 0 4px 4px 0;
+
+  /* Tablet */
+  @media (max-width: 1024px) {
+    width: 15%;
+  }
+
+  /* Mobile */
+  @media (max-width: 600px) {
+    width: 48px;
+  }
 `;
+
