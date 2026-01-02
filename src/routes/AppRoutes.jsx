@@ -7,6 +7,11 @@ import ProtectedRoute from "./ProtectedRoutes";
 import Profile from "../pages/Profile"
 import Order from "../pages/Order";
 import Wishlist from "../pages/Wishlist";
+import AboutUs from "../pages/AboutUs";
+import ContactUs from "../pages/ContactUs";
+import TermsAndConditions from "../pages/TermsAndConditions";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
+
 
 const AppRoutes = () => {
   return (
@@ -54,7 +59,36 @@ const AppRoutes = () => {
           </ProtectedRoute>
         }
       />
+      <Route
+        path="/aboutUs"
+        element={
+
+            <AboutUs />
+        }
+      />
+      <Route
+        path="/contactUs"
+        element={
+
+            <ContactUs />
+        }
+      />
+      <Route
+        path="/termsandconditions"
+        element={
+
+            <TermsAndConditions />
+        }
+      />
+      <Route
+        path="/privacypolicy"
+        element={
+
+            <PrivacyPolicy/>
+        }
+      />
     </Routes>
+  
   );
 };
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./HomeFooter.css";
 
 import MenuBookIcon from "@mui/icons-material/MenuBook";
@@ -49,10 +50,18 @@ const HomeFooter = () => {
         <div className="footer-column">
           <h4>Quick Links</h4>
           <ul>
-            <li>About Us</li>
-            <li>Contact</li>
-            <li>Privacy Policy</li>
-            <li>Terms & Conditions</li>
+            <li>
+              <Link to="/aboutus">About Us</Link>
+            </li>
+            <li>
+              <Link to="/contacus">Contact Us</Link>
+            </li>
+            <li>
+              <Link to="/privacypolicy">Privacy Policy</Link>
+            </li>
+            <li>
+              <Link to="/termsandconditions">Terms & Conditions</Link>
+            </li>
           </ul>
         </div>
 
