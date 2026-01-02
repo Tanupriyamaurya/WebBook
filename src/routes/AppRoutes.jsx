@@ -60,14 +60,14 @@ const AppRoutes = () => {
         }
       />
       <Route
-        path="/aboutUs"
+        path="/aboutus"
         element={
 
             <AboutUs />
         }
       />
       <Route
-        path="/contactUs"
+        path="/contactus"
         element={
 
             <ContactUs />

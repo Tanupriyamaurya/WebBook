@@ -54,7 +54,7 @@ const HomeFooter = () => {
               <Link to="/aboutus">About Us</Link>
             </li>
             <li>
-              <Link to="/contacus">Contact Us</Link>
+              <Link to="/contactus">Contact Us</Link>
             </li>
             <li>
               <Link to="/privacypolicy">Privacy Policy</Link>
